@@ -1,0 +1,129 @@
+
+
+
+<form class=" well form-horizontal" action=" " method="post"  id="contact_form">
+    <fieldset>
+    
+    <!-- Form Name -->
+    <h2 class="offset-4">Formulaire d'enregistrement</h2>
+    
+    <!-- Text input-->
+    
+    <div class="offset-3 form-group">
+      <label class="col-md-4 control-label">Nom</label>  
+      <div class="col-md-8 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="first_name" placeholder="Nom" class="form-control"  type="text" [(ngModel)]="nom" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    
+    <div class="offset-3 form-group">
+      <label class="col-md-4 control-label" >Prenom</label> 
+        <div class="col-md-8 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="last_name" placeholder="Prenom" class="form-control"  type="text" [(ngModel)]="prenom" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+    </div>
+    
+      <div class="offset-3 form-group"> 
+      <label class="col-md-4 control-label">Organisation</label>
+        <div class="col-md-8 selectContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+        <select name="department" class="form-control selectpicker">
+          <option value="">Veuillez selectionner votre organisation</option>
+          <option>Department of Engineering</option>
+          <option>Department of Agriculture</option>
+          <option >Accounting Office</option>
+          <option >Tresurer's Office</option>
+          <option >MPDC</option>
+          <option >MCTC</option>
+          <option >MCR</option>
+          <option >Mayor's Office</option>
+          <option >Tourism Office</option>
+        </select>
+      </div>
+    </div>
+    </div>
+      
+    <!-- Text input-->
+    
+    <div class="offset-3 form-group">
+      <label class="col-md-4 control-label">Nom d'utilisateur</label>  
+      <div class="col-md-8 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="user_name" placeholder="Username" class="form-control"  type="text" >
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    
+    <div class="offset-3 form-group">
+      <label class="col-md-4 control-label" >Mot de passe</label> 
+        <div class="col-md-8 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="user_password" placeholder="Password" class="form-control"  type="password">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    
+    <div class="offset-3 form-group">
+      <label class="col-md-4 control-label" >Confirmer votre mot de passe</label> 
+        <div class="col-md-8 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="confirm_password" placeholder="Confirm Password" class="form-control"  type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="offset-3 form-group">
+      <label class="col-md-4 control-label" name="email">Adresse mail</label>  
+        <div class="col-md-8 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input name="email" placeholder="E-Mail" class="form-control"  type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" >
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Text input-->
+           
+    <div class="offset-3 form-group">
+      <label class="col-md-4 control-label">Contact No.</label>  
+        <div class="col-md-8 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+      <input name="contact_no" placeholder="(+216)" class="form-control" type="text">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Select Basic -->
+    
+    <!-- Success message -->
+    
+    <!-- Button -->
+    <div class="offset-6 form-group">
+      <div class="col-md-4"><br>
+        <button type="button" class="btn btn-success" (click)="update()"  >Ajouter</button>
+        <button type="button" class="btn btn-danger" routerLink="/user-list" >Annuler</button>
+      </div>
+    </div>
+    
+    </fieldset>
+    </form>
+    

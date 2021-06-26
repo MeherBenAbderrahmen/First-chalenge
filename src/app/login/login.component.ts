@@ -1,6 +1,5 @@
-import { registerLocaleData } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { RegisterComponent } from '../register/register.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,7 +11,7 @@ export class LoginComponent implements OnInit {
   mail: any;
 
   //@Input() reg: RegisterComponent;
-  constructor() {
+  constructor(private router:Router) {
     //  this.reg = new RegisterComponent;
   }
 
@@ -24,18 +23,20 @@ export class LoginComponent implements OnInit {
 
     const emailVerify = this.email;
     const pwdVerify = this.password;
-    console.log(emailVerify);
+    //console.log(emailVerify);
     const registr = JSON.parse(localStorage.getItem('registration') || '[]');
     //fonctionFleché (arrow function)
-    function isEmail(element: any) {
-      return element.email === emailVerify && element.password === pwdVerify;
-    }
+    // function isEmail(element: any) {
+    //   return element.email === emailVerify && element.password === pwdVerify;
+    // }
     
 
-    const result = registr.find(isEmail);
-    console.log(result);
+    const result = registr.find((element:any) =>  element.email === emailVerify && element.password === pwdVerify);
+    // console.log(result);
     if (result != undefined) {
-      window.location.href = "/welcom";
+      // window.location.href = "/welcom";
+      // this.router.navigate(['/welcom']);
+      this.router.navigateByUrl('/welcom');
     } else {
       alert("Veillez verifier vos informations!!!");
     }

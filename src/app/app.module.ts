@@ -9,6 +9,10 @@ import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { WelcomComponent } from './welcom/welcom.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserAddComponent } from './user-add/user-add.component';
+import { UserUpdateComponent } from './user-update/user-update.component';
+import { TableLigneComponent } from './table-ligne/table-ligne.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { WelcomComponent } from './welcom/welcom.component';
     RegisterComponent,
     LoginComponent,
     ContactComponent,
-    WelcomComponent
+    WelcomComponent,
+    UserListComponent,
+    UserAddComponent,
+    UserUpdateComponent,
+    TableLigneComponent
   ],
   imports: [
     BrowserModule,

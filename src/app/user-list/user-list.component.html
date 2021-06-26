@@ -1,0 +1,32 @@
+<div class="offset-6 form-group">
+  <div class="col-md-4"><br>
+    <button type="button" class="btn btn-success" routerLink="/user-add">Ajouter</button>
+  </div>
+</div>
+<div class="container">
+    <h2>La liste des utilisateur</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Email</th>
+          <th>Pwd</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index">
+          <td>{{ user.nom}}</td>
+          <td>{{ user.prenom}}</td>
+          <td>{{ user.email}}</td>
+          <td>{{ user.password}}</td>
+          <td><button class="btn btn-update" [routerLink]="['/user-update', i]"> <img src="../../assets/img/icons8-edit-48.png"></button>
+             <button class="btn btn-delete" (click)="supprimerElement(i)"> <img src="../../assets/img/icons8-ajouter-une-corbeille-24.png"></button>
+          </td>
+        </tr>
+       </tbody>
+    </table>
+  </div>
+
+
